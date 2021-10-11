@@ -1,0 +1,11 @@
+RUNNING WITH LOGS IN HTML REPORT
+py.test -v --html=../Reports/report.html --capture=tee-sys
+
+RUNNING TEST WITH REPORT
+py.test --html=../Reports/report.html
+
+RUNNING TEST WITH ALLURE REPORT
+py.test --alluredir=../allure_report
+
+GENERATING ALLURE REPORT
+allure serve ../allure_report/
