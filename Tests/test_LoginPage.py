@@ -2,7 +2,7 @@ from Pages.LoginPage import LoginPage
 from Tests.test_BaseTest import BaseTest
 
 
-class Test_HomePage(BaseTest):
+class Test_LoginPage(BaseTest):
 
     def test_login_page(self):
         log_in_page = LoginPage(self.driver)
@@ -10,12 +10,12 @@ class Test_HomePage(BaseTest):
         log_in_page.verify_username_field_is_visible()
         log_in_page.verify_password_field_is_visible()
         log_in_page.verify_button_is_visible()
-        log_in_page.enter_username_data()
-        log_in_page.enter_password_data()
-        log_in_page.submit_button_element()
+        log_in_page.enter_username()
+        log_in_page.enter_password()
+        log_in_page.click_login()
 
     def test_input(self):
-        self.test_login_page()
+        assert "Hi" == "Hello"
 
 
 

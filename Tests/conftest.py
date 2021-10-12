@@ -18,7 +18,7 @@ def pytest_addoption(parser):
 
 
 '''Declaration of Fixture for setup and teardown'''
-@pytest.fixture(scope="class")
+@pytest.fixture(scope="class") # we can run in method level when we remove the scope parameter
 def setup(request):
     global driver   # This is the partner of driver = None
 

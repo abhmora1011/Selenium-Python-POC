@@ -26,20 +26,20 @@ class LoginPage(BaseClass):
     def verify_username_field_is_visible(self):
         self.verify_element_is_present(self.username)
 
-    def enter_username_data(self):
-        self.enter_text(self.username,TestData.ADMIN_PASSWORD)
+    def enter_username(self):
+        self.enter_text_to_an_element(self.username, TestData.ADMIN_USERNAME)
 
     def verify_password_field_is_visible(self):
         self.verify_element_is_present(self.password)
 
-    def enter_password_data(self):
-        self.enter_text(self.username, TestData.ADMIN_PASSWORD)
+    def enter_password(self):
+        self.enter_text_to_an_element(self.password, TestData.ADMIN_PASSWORD)
 
     def verify_button_is_visible(self):
         self.verify_element_is_present(self.submit_button)
 
-    def submit_button_element(self):
-        self.click_element_by_locator(self.submit_button)
+    def click_login(self):
+        self.click_element(self.submit_button)
 
 
 

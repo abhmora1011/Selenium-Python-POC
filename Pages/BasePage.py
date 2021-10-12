@@ -36,11 +36,10 @@ class BaseClass:
             EC.presence_of_element_located(by_locator))
         return element.text
 
-    def verify_link_presence(self, text):
+    def verify_link_is_present(self, text):
         element = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.LINK_TEXT, text)))
         return element
-
 
     def verify_element_is_present(self, by_locator):
         element = WebDriverWait(self.driver, 10).until(
@@ -51,10 +50,10 @@ class BaseClass:
         sel = Select(by_locator)
         sel.select_by_visible_text(text)
 
-    def click_element_by_locator(self, by_locator):
+    def click_element(self, by_locator):
         WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(by_locator)).click()
 
-    def enter_text(self, by_locator,text):
+    def enter_text_to_an_element(self, by_locator,text):
         WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(by_locator)).send_keys(text)
 
 
